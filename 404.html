@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Oops! Page Not Found</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Error Page Container */
+        #error-page {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .error-container h1 {
+            font-size: 4em;
+            color: #ff6347;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .error-container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .error-img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            animation: zoomIn 2s ease-out;
+        }
+
+        .error-msg {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ff6347;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .home-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            animation: bounceIn 1s ease-in-out;
+        }
+
+        .home-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .error-tip {
+            font-style: italic;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="error-page">
+        <div class="error-container">
+            <h1>Oops!</h1>
+            <p>Looks like you’ve found a page that doesn’t exist. It’s probably hiding from us too.</p>
+            <img src="https://via.placeholder.com/400x200.png?text=Lost+in+the+internet" alt="Lost in the Internet" class="error-img">
+            <p class="error-msg">The page you are looking for is <strong>404%</strong> gone!</p>
+            <a href="/" class="home-btn">Take Me Home</a>
+            <p class="error-tip">Tip: Maybe check the URL or just take a coffee break!</p>
+        </div>
+    </div>
+
+    <script>
+        // 404.js
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const tips = [
+                "Check the URL carefully, maybe it's just a typo!",
+                "Try searching for something else. The world is big!",
+                "404% gone! No need to panic.",
+                "Even the best websites lose their pages sometimes.",
+                "Don't worry, even the internet gets lost now and then."
+            ];
+            
+            const errorTip = document.querySelector('.error-tip');
+            const randomTip = tips[Math.floor(Math.random() * tips.length)];
+            
+            errorTip.textContent = `Tip: ${randomTip}`;
+        });
+    </script>
+
+</body>
+</html>

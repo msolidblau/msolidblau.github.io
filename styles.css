@@ -1,0 +1,133 @@
+/* Global reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+#intro {
+    background: #003366;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+#intro h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: slideIn 1.5s ease-out;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Contact Info Section */
+#contact {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+ul li {
+    margin: 15px 0;
+}
+
+a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+/* GitHub Projects Section */
+#projects {
+    background: #eef1f6;
+    padding: 40px 20px;
+    text-align: center;
+    animation: fadeInUp 2s ease-out;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+#projects ul li {
+    margin: 15px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
